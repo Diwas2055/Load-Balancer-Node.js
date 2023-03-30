@@ -1,0 +1,29 @@
+version: "3.1"
+
+services:
+  server1:
+    build: ./node
+    expose:
+      - "3000"
+    environment:
+      PORT: 3000
+  server2:
+    build: ./node
+    expose:
+      - "3001"
+    environment:
+      PORT: 3001
+  server3:
+    build: ./node
+    expose:
+      - "3002"
+    environment:
+      PORT: 3002
+  nginx:
+    build: ./nginx
+    ports:
+      - 8086:80
+    depends_on:
+      - server1
+      - server2
+      - server3
