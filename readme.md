@@ -1,8 +1,8 @@
 # Load Balancing Node.js Applications with NGINX and Docker
 
-## Configuration 4  
+## Configuration
 
-![img conf IV](images/image-20211103141437433.png)
+![Load Balancer Flow](images/image-20211103141437433.png)
 
 Example de **server nodejs**:
 
