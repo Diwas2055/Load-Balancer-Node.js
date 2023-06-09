@@ -1,0 +1,18 @@
+version: "3.1"
+
+services:
+  server:
+    build: ./node
+    environment:
+      - PORT=3000
+    deploy:
+      replicas: 3
+    ports:
+      - "3000"
+
+  nginx:
+    build: ./nginx
+    ports:
+      - 8086:80
+    depends_on:
+      - server
